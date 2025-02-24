@@ -11,7 +11,8 @@ import SwiftUI
 struct LetGoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LandingView()
+           // ContentView()
         }
     }
 }
