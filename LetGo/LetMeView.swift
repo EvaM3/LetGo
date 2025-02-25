@@ -26,7 +26,7 @@ struct LetMeView: View {
             Color(red: 0.0228, green: 0.1800, blue: 0.1067)
                 .ignoresSafeArea(edges: .all)
 
-            // Moving Circles for Ambient Glow
+            //  Ambient Glow
             ForEach(animator.circles) { circle in
                 MovingCircle(originOffset: circle.position, color: circle.color)
             }

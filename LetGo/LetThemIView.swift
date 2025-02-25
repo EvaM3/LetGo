@@ -34,7 +34,7 @@ struct LetThemView: View {
             Color(red: 0.0228, green: 0.1800, blue: 0.1067)
                 .ignoresSafeArea(edges: .all)
 
-            // Moving Circles for Ambient Glow
+            //  Ambient Glow
             ForEach(animator.circles) { circle in
                 MovingCircle(originOffset: circle.position, color: circle.color)
             }
@@ -63,7 +63,7 @@ struct LetThemView: View {
                         .foregroundColor(.white)
                         .padding(.bottom, 5)
 
-                    // Scenario Selection Menu
+                    // Scenario Selection
                     Menu {
                         ForEach(scenarios, id: \.self) { scenario in
                             Button(action: {

@@ -10,6 +10,7 @@ struct AcceptanceDetachmentView: View {
     @State private var userReflection = ""
     @State private var emotionLabel = ""
     @State private var detachmentVisualization = ""
+    @StateObject private var affirmationService = AffirmationAPIService()
 
     private let gradientColors: [Color] = [
         Color(red: 0.1, green: 0.4, blue: 0.3),
@@ -52,7 +53,7 @@ struct AcceptanceDetachmentView: View {
                             }
                             .padding(.top, 40)
 
-                            // Reflection Part - Ensures it's always visible
+                            // Reflection Part 
                             VStack(alignment: .leading, spacing: 20) {
                                 VStack(alignment: .leading) {
                                     Text("Reflect on What You’re Resisting:")
@@ -67,7 +68,7 @@ struct AcceptanceDetachmentView: View {
                                         TextEditor(text: $userReflection)
                                             .frame(height: 100)
                                             .foregroundColor(.white)
-                                            .background(Color.clear) // Ensures readability
+                                            .background(Color.clear)
                                             .padding(8)
                                     }
                                 }
@@ -83,34 +84,63 @@ struct AcceptanceDetachmentView: View {
                                         .background(Color.white.opacity(0.2))
                                         .cornerRadius(10)
                                         .padding(.horizontal)
-                                }
+                                    Button(action: {
+                                                                        affirmationService.fetchAffirmation(for: emotionLabel)
+                                                                    }) {
+                                                                        Text("Get Affirmation")
+                                                                            .font(.headline)
+                                                                            .padding()
+                                                                            .frame(maxWidth: .infinity)
+                                                                            .background(LinearGradient(gradient: Gradient(colors: gradientColors.shuffled()), startPoint: .leading, endPoint: .trailing))
+                                                                            .foregroundColor(.white)
+                                                                            .cornerRadius(10)
+                                                                            .padding(.horizontal)
+                                                                    }
+                                                                }
 
-                                VStack(alignment: .leading) {
-                                    Text("Visualize Letting Go:")
-                                        .font(.headline)
-                                        .foregroundColor(.white)
+                                                                // Display Fetched Affirmation
+                                                                if let affirmation = affirmationService.affirmation {
+                                                                    VStack(alignment: .leading) {
+                                                                        Text("Affirmation for You:")
+                                                                            .font(.headline)
+                                                                            .foregroundColor(.white)
 
-                                    ZStack(alignment: .topLeading) {
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .fill(Color.white.opacity(0.15))
-                                            .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
+                                                                        Text("“\(affirmation.text)”")
+                                                                            .font(.body)
+                                                                            .italic()
+                                                                            .foregroundColor(.white.opacity(0.9))
+                                                                            .padding()
+                                                                            .background(Color.white.opacity(0.15))
+                                                                            .cornerRadius(10)
+                                                                    }
+                                                                    .padding(.horizontal)
+                                                                }
 
-                                        TextEditor(text: $detachmentVisualization)
-                                            .frame(height: 80)
-                                            .foregroundColor(.white)
-                                            .background(Color.clear) // Ensures readability
-                                         
-                                    }
-                                }
-                            }
-                            .padding(.horizontal)
+                                                                VStack(alignment: .leading) {
+                                                                    Text("Visualize Letting Go:")
+                                                                        .font(.headline)
+                                                                        .foregroundColor(.white)
 
-                            Spacer(minLength: 30) // Ensures no text is cut off when scrolling
-                        }
-                        .frame(minHeight: geometry.size.height * 0.8) // Ensures scrollable content
-                    }
+                                                                    ZStack(alignment: .topLeading) {
+                                                                        RoundedRectangle(cornerRadius: 10)
+                                                                            .fill(Color.white.opacity(0.15))
+                                                                            .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
 
-                    // Fixed Bottom Button (Ensures it's always accessible)
+                                                                        TextEditor(text: $detachmentVisualization)
+                                                                            .frame(height: 80)
+                                                                            .foregroundColor(.white)
+                                                                            .background(Color.clear)
+                                                                    }
+                                                                }
+                                                            }
+                                                            .padding(.horizontal)
+
+                                                            Spacer(minLength: 30)
+                                                        }
+                                                        .frame(minHeight: geometry.size.height * 0.8)
+                                                    }
+
+                    // Fixed Bottom Button
                     VStack {
                         NavigationLink(destination: TappingSessionView(affirmation: "I accept this moment and let go of my need to control.")) {
                             HStack {
