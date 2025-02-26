@@ -26,6 +26,7 @@ struct LandingView: View {
     }
     
     @State private var navigateToMain = false
+    @State private var navigateToInfo = false
     @State private var fadeIn = false
     @State private var glowingText = false
     
@@ -73,8 +74,30 @@ struct LandingView: View {
                             .padding(.horizontal, 40)
                     }
                     .opacity(fadeIn ? 1 : 0)
-
-                }
+                    // Information Button
+                                      Button(action: {
+                                          HapticManager.triggerLightImpact()
+                                          withAnimation(.easeInOut(duration: 1)) {
+                                              navigateToInfo = true
+                                          }
+                                      }) {
+                                          HStack {
+                                              Image(systemName: "book.fill")
+                                              Text("Learn More About LetGo")
+                                          }
+                                          .font(.subheadline)
+                                          .padding()
+                                          .frame(maxWidth: .infinity)
+                                          .background(
+                                              LinearGradient(gradient: Gradient(colors: GradientColors.all), startPoint: .leading, endPoint: .trailing)
+                                          )
+                                          .foregroundColor(.black)
+                                          .cornerRadius(10)
+                                          .padding(.horizontal, 40)
+                                      }
+                                      .opacity(fadeIn ? 1 : 0)
+                                  }
+                
                 .onAppear {
                     withAnimation(.easeInOut(duration: 1.5)) {
                         fadeIn = true
@@ -89,6 +112,12 @@ struct LandingView: View {
                     .transition(.opacity)
                     .animation(.easeIn(duration: 1), value: navigateToMain)
             }
+        // Navigation to Information View
+                   .navigationDestination(isPresented: $navigateToInfo) {
+                       InformationView()
+                           .transition(.opacity)
+                           .animation(.easeIn(duration: 1), value: navigateToInfo)
+                   }
         }
     }
 }
