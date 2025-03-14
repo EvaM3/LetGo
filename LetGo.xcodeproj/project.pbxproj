@@ -15,6 +15,13 @@
 		A02487922D41901F009C9C67 /* ProgressIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02487912D41901F009C9C67 /* ProgressIView.swift */; };
 		A02487942D419150009C9C67 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02487932D419150009C9C67 /* SettingsView.swift */; };
 		A054CCD02D6FB738007080BC /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054CCCF2D6FB738007080BC /* InformationView.swift */; };
+		A0559C7B2D84D692001CF4C8 /* LetGoUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0559C7A2D84D692001CF4C8 /* LetGoUnitTests.swift */; };
+		A0559C822D84D6F1001CF4C8 /* LetThemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0559C812D84D6F1001CF4C8 /* LetThemTests.swift */; };
+		A0559C842D84DA8B001CF4C8 /* LetMeUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0559C832D84DA8B001CF4C8 /* LetMeUnitTests.swift */; };
+		A0559C862D84DDBD001CF4C8 /* LetMeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0559C852D84DDBD001CF4C8 /* LetMeViewModel.swift */; };
+		A0559C882D84E0B3001CF4C8 /* AcceptanceDetachmentUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0559C872D84E0B3001CF4C8 /* AcceptanceDetachmentUnitTests.swift */; };
+		A0559C8C2D84E650001CF4C8 /* AffirmationAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0559C8B2D84E650001CF4C8 /* AffirmationAPIService.swift */; };
+		A0559C8E2D84E730001CF4C8 /* MockedAffirmationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0559C8D2D84E730001CF4C8 /* MockedAffirmationServiceTests.swift */; };
 		A05803BD2D4C069D00B6DD90 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05803BC2D4C069D00B6DD90 /* LandingView.swift */; };
 		A05803BF2D4C073A00B6DD90 /* ParticleEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05803BE2D4C073A00B6DD90 /* ParticleEffectView.swift */; };
 		A05803C12D4C076900B6DD90 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05803C02D4C076900B6DD90 /* MainTabView.swift */; };
@@ -32,6 +39,16 @@
 		A0E3A8532D5C1610007DBC47 /* MovingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E3A8522D5C1610007DBC47 /* MovingCircle.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A0559C7C2D84D692001CF4C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A02487702D418B42009C9C67 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A02487772D418B42009C9C67;
+			remoteInfo = LetGo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		A02487782D418B42009C9C67 /* LetGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A024877B2D418B42009C9C67 /* LetGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetGoApp.swift; sourceTree = "<group>"; };
@@ -42,6 +59,14 @@
 		A02487912D41901F009C9C67 /* ProgressIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIView.swift; sourceTree = "<group>"; };
 		A02487932D419150009C9C67 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A054CCCF2D6FB738007080BC /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		A0559C782D84D691001CF4C8 /* LetGoUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LetGoUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0559C7A2D84D692001CF4C8 /* LetGoUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetGoUnitTests.swift; sourceTree = "<group>"; };
+		A0559C812D84D6F1001CF4C8 /* LetThemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetThemTests.swift; sourceTree = "<group>"; };
+		A0559C832D84DA8B001CF4C8 /* LetMeUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetMeUnitTests.swift; sourceTree = "<group>"; };
+		A0559C852D84DDBD001CF4C8 /* LetMeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetMeViewModel.swift; sourceTree = "<group>"; };
+		A0559C872D84E0B3001CF4C8 /* AcceptanceDetachmentUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptanceDetachmentUnitTests.swift; sourceTree = "<group>"; };
+		A0559C8B2D84E650001CF4C8 /* AffirmationAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmationAPIService.swift; sourceTree = "<group>"; };
+		A0559C8D2D84E730001CF4C8 /* MockedAffirmationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedAffirmationServiceTests.swift; sourceTree = "<group>"; };
 		A05803BC2D4C069D00B6DD90 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		A05803BE2D4C073A00B6DD90 /* ParticleEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleEffectView.swift; sourceTree = "<group>"; };
 		A05803C02D4C076900B6DD90 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -67,6 +92,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A0559C752D84D691001CF4C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -74,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				A024877A2D418B42009C9C67 /* LetGo */,
+				A0559C792D84D692001CF4C8 /* LetGoUnitTests */,
 				A02487792D418B42009C9C67 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				A02487782D418B42009C9C67 /* LetGo.app */,
+				A0559C782D84D691001CF4C8 /* LetGoUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,14 +129,13 @@
 				A05803BE2D4C073A00B6DD90 /* ParticleEffectView.swift */,
 				A05803C22D4C1A6A00B6DD90 /* Landing */,
 				A0C529F62D42F7780048CA9F /* AcceptanceDetachmentView.swift */,
-				A0DD61C72D6E61E6004DA29A /* AffirmationAPI.swift */,
 				A024877D2D418B42009C9C67 /* ContentView.swift */,
 				A024877F2D418B43009C9C67 /* Assets.xcassets */,
 				A02487812D418B43009C9C67 /* Preview Content */,
 				A024878B2D418E34009C9C67 /* LetThemIView.swift */,
 				A02487912D41901F009C9C67 /* ProgressIView.swift */,
 				A02487932D419150009C9C67 /* SettingsView.swift */,
-				A0C529F82D42FB260048CA9F /* LetMeView.swift */,
+				A0559C902D84ED5E001CF4C8 /* LetMe */,
 				A0E3A8522D5C1610007DBC47 /* MovingCircle.swift */,
 			);
 			path = LetGo;
@@ -116,9 +149,40 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A0559C792D84D692001CF4C8 /* LetGoUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				A0559C7A2D84D692001CF4C8 /* LetGoUnitTests.swift */,
+				A0559C812D84D6F1001CF4C8 /* LetThemTests.swift */,
+				A0559C832D84DA8B001CF4C8 /* LetMeUnitTests.swift */,
+				A0559C872D84E0B3001CF4C8 /* AcceptanceDetachmentUnitTests.swift */,
+				A0559C8D2D84E730001CF4C8 /* MockedAffirmationServiceTests.swift */,
+			);
+			path = LetGoUnitTests;
+			sourceTree = "<group>";
+		};
+		A0559C8F2D84ED25001CF4C8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A0DD61C72D6E61E6004DA29A /* AffirmationAPI.swift */,
+				A0559C8B2D84E650001CF4C8 /* AffirmationAPIService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A0559C902D84ED5E001CF4C8 /* LetMe */ = {
+			isa = PBXGroup;
+			children = (
+				A0559C852D84DDBD001CF4C8 /* LetMeViewModel.swift */,
+				A0C529F82D42FB260048CA9F /* LetMeView.swift */,
+			);
+			path = LetMe;
+			sourceTree = "<group>";
+		};
 		A05803C22D4C1A6A00B6DD90 /* Landing */ = {
 			isa = PBXGroup;
 			children = (
+				A0559C8F2D84ED25001CF4C8 /* API */,
 				A05803BC2D4C069D00B6DD90 /* LandingView.swift */,
 				A05803CA2D4C29FD00B6DD90 /*  HapticManager.swift */,
 				A05803C32D4C1A9800B6DD90 /* SoundManager.swift */,
@@ -168,6 +232,24 @@
 			productReference = A02487782D418B42009C9C67 /* LetGo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A0559C772D84D691001CF4C8 /* LetGoUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0559C802D84D692001CF4C8 /* Build configuration list for PBXNativeTarget "LetGoUnitTests" */;
+			buildPhases = (
+				A0559C742D84D691001CF4C8 /* Sources */,
+				A0559C752D84D691001CF4C8 /* Frameworks */,
+				A0559C762D84D691001CF4C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0559C7D2D84D692001CF4C8 /* PBXTargetDependency */,
+			);
+			name = LetGoUnitTests;
+			productName = LetGoUnitTests;
+			productReference = A0559C782D84D691001CF4C8 /* LetGoUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -180,6 +262,10 @@
 				TargetAttributes = {
 					A02487772D418B42009C9C67 = {
 						CreatedOnToolsVersion = 15.3;
+					};
+					A0559C772D84D691001CF4C8 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = A02487772D418B42009C9C67;
 					};
 				};
 			};
@@ -197,6 +283,7 @@
 			projectRoot = "";
 			targets = (
 				A02487772D418B42009C9C67 /* LetGo */,
+				A0559C772D84D691001CF4C8 /* LetGoUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -211,6 +298,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A0559C762D84D691001CF4C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -222,6 +316,7 @@
 				A05803BD2D4C069D00B6DD90 /* LandingView.swift in Sources */,
 				A02487942D419150009C9C67 /* SettingsView.swift in Sources */,
 				A024878C2D418E34009C9C67 /* LetThemIView.swift in Sources */,
+				A0559C862D84DDBD001CF4C8 /* LetMeViewModel.swift in Sources */,
 				A05803C72D4C1C2B00B6DD90 /* GlassmorphicBackground.swift in Sources */,
 				A05803C92D4C1D9800B6DD90 /* GradientColors.swift in Sources */,
 				A05803D12D4C2DD600B6DD90 /* LoadingView.swift in Sources */,
@@ -231,6 +326,7 @@
 				A024877E2D418B42009C9C67 /* ContentView.swift in Sources */,
 				A0C529FC2D42FC8A0048CA9F /* TappingPoint.swift in Sources */,
 				A0C529F92D42FB260048CA9F /* LetMeView.swift in Sources */,
+				A0559C8C2D84E650001CF4C8 /* AffirmationAPIService.swift in Sources */,
 				A0DD61C82D6E61E6004DA29A /* AffirmationAPI.swift in Sources */,
 				A0E3A8532D5C1610007DBC47 /* MovingCircle.swift in Sources */,
 				A05803BF2D4C073A00B6DD90 /* ParticleEffectView.swift in Sources */,
@@ -242,7 +338,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A0559C742D84D691001CF4C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0559C842D84DA8B001CF4C8 /* LetMeUnitTests.swift in Sources */,
+				A0559C882D84E0B3001CF4C8 /* AcceptanceDetachmentUnitTests.swift in Sources */,
+				A0559C7B2D84D692001CF4C8 /* LetGoUnitTests.swift in Sources */,
+				A0559C822D84D6F1001CF4C8 /* LetThemTests.swift in Sources */,
+				A0559C8E2D84E730001CF4C8 /* MockedAffirmationServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A0559C7D2D84D692001CF4C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A02487772D418B42009C9C67 /* LetGo */;
+			targetProxy = A0559C7C2D84D692001CF4C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A02487842D418B43009C9C67 /* Debug */ = {
@@ -422,6 +538,42 @@
 			};
 			name = Release;
 		};
+		A0559C7E2D84D692001CF4C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58Q543QXGB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tora.buke-gmail.com.LetGoUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LetGo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LetGo";
+			};
+			name = Debug;
+		};
+		A0559C7F2D84D692001CF4C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58Q543QXGB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tora.buke-gmail.com.LetGoUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LetGo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LetGo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -439,6 +591,15 @@
 			buildConfigurations = (
 				A02487872D418B43009C9C67 /* Debug */,
 				A02487882D418B43009C9C67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0559C802D84D692001CF4C8 /* Build configuration list for PBXNativeTarget "LetGoUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0559C7E2D84D692001CF4C8 /* Debug */,
+				A0559C7F2D84D692001CF4C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

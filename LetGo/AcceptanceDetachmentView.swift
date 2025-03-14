@@ -10,7 +10,7 @@ struct AcceptanceDetachmentView: View {
     @State private var userReflection = ""
     @State private var emotionLabel = ""
     @State private var detachmentVisualization = ""
-    @StateObject private var affirmationService = AffirmationAPIService()
+    @StateObject private var affirmationService = AffirmationAPIMockService()
 
     private let gradientColors: [Color] = [
         Color(red: 0.1, green: 0.4, blue: 0.3),

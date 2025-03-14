@@ -6,6 +6,18 @@
 //
 
 import Foundation
+import Combine
+
+// MARK: - Protocol & Extension
+
+protocol URLSessionProtocol {
+    func dataTask(
+        with url: URL,
+        completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void
+    ) -> URLSessionDataTask
+}
+
+extension URLSession: URLSessionProtocol {}
 
 //  Affirmation Model
 struct Affirmation: Codable, Identifiable {

@@ -15,8 +15,16 @@ struct LetThemView: View {
         "Let them misunderstand you."
     ]
 
-    @State private var selectedScenario = "Let them judge you."
-    @State private var userReflection = ""
+    @State var selectedScenario = "Let them judge you."
+    @State var userReflection = ""
+    
+    init() {
+         self.selectedScenario = scenarios[0]
+     }
+
+     func selectScenario(_ scenario: String) {
+         selectedScenario = scenario
+     }
 
     private let gradientColors: [Color] = [
         Color(red: 0.1, green: 0.4, blue: 0.3),

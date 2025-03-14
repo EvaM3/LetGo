@@ -2,13 +2,14 @@
 //  LetMeView.swift
 //  LetGo
 //
-//  Created by Eva Sira Madarasz on 23/01/2025.
+//  Created by Eva Madarasz 
 //
 
 import SwiftUI
 
 struct LetMeView: View {
-    @State private var empowermentReflection = ""
+    @StateObject var viewModel = LetMeViewModel()
+  
 
     private let gradientColors: [Color] = [
         Color(red: 0.1, green: 0.4, blue: 0.3),
@@ -58,7 +59,8 @@ struct LetMeView: View {
                             .fill(Color.white.opacity(0.15))
                             .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
 
-                        TextEditor(text: $empowermentReflection)
+                        TextEditor(text: $viewModel.empowermentReflection)
+                       
                             .frame(height: 150)
                             .foregroundColor(.white)
                             .padding(8)
