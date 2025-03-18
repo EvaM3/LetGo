@@ -180,6 +180,7 @@ struct InformationView: View {
             }
         }
         .navigationTitle("Information")
+
     }
 }
 

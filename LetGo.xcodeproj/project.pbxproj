@@ -149,9 +149,9 @@
 				A0C529FA2D42FC680048CA9F /* Tapping */,
 				A024877B2D418B42009C9C67 /* LetGoApp.swift */,
 				A05803C52D4C1BFF00B6DD90 /* MainTab */,
-				A05803BE2D4C073A00B6DD90 /* ParticleEffectView.swift */,
 				A05803C22D4C1A6A00B6DD90 /* Landing */,
 				A0C529F62D42F7780048CA9F /* AcceptanceDetachmentView.swift */,
+				A05803BE2D4C073A00B6DD90 /* ParticleEffectView.swift */,
 				A024877D2D418B42009C9C67 /* ContentView.swift */,
 				A024877F2D418B43009C9C67 /* Assets.xcassets */,
 				A02487812D418B43009C9C67 /* Preview Content */,
@@ -215,11 +215,11 @@
 		A05803C22D4C1A6A00B6DD90 /* Landing */ = {
 			isa = PBXGroup;
 			children = (
-				A0559C8F2D84ED25001CF4C8 /* API */,
-				A05803BC2D4C069D00B6DD90 /* LandingView.swift */,
-				A05803CA2D4C29FD00B6DD90 /*  HapticManager.swift */,
-				A05803C32D4C1A9800B6DD90 /* SoundManager.swift */,
 				A054CCCF2D6FB738007080BC /* InformationView.swift */,
+				A05803C32D4C1A9800B6DD90 /* SoundManager.swift */,
+				A05803CA2D4C29FD00B6DD90 /*  HapticManager.swift */,
+				A05803BC2D4C069D00B6DD90 /* LandingView.swift */,
+				A0559C8F2D84ED25001CF4C8 /* API */,
 			);
 			path = Landing;
 			sourceTree = "<group>";

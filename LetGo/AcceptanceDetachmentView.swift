@@ -75,33 +75,31 @@ struct AcceptanceDetachmentView: View {
                                     }
                                 }
 
-                                VStack(alignment: .leading) {
+                                VStack(alignment: .leading, spacing: 10) {
                                     Text("Label Your Emotion:")
                                         .font(.headline)
                                         .foregroundColor(.white)
 
                                     TextField("e.g., Anxiety, Anger, Sadness", text: $emotionLabel)
                                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                                        .padding()
                                         .background(Color.white.opacity(0.2))
                                         .cornerRadius(10)
-                                        .padding(.horizontal)
                                         .accessibilityIdentifier("emotionTextField")
-                                    Button(action: {
-                                                                        affirmationService.fetchAffirmation(for: emotionLabel)
-                                                                    }) {
-                                                                        Text("Get Affirmation")
-                                                                            .font(.headline)
-                                                                            .padding()
-                                                                            .frame(maxWidth: .infinity)
-                                                                            .background(LinearGradient(gradient: Gradient(colors: gradientColors.shuffled()), startPoint: .leading, endPoint: .trailing))
-                                                                            .foregroundColor(.white)
-                                                                            .cornerRadius(10)
-                                                                            .padding(.horizontal)
-                                                                    }
-                                                                    .accessibilityIdentifier("getAffirmationButton")
 
-                                                                }
+                                    Button(action: {
+                                        affirmationService.fetchAffirmation(for: emotionLabel)
+                                    }) {
+                                        Text("Get Affirmation")
+                                            .font(.headline)
+                                            .padding()
+                                            .frame(maxWidth: .infinity)
+                                            .background(LinearGradient(gradient: Gradient(colors: gradientColors.shuffled()), startPoint: .leading, endPoint: .trailing))
+                                            .foregroundColor(.white)
+                                            .cornerRadius(10)
+                                    }
+                                    .accessibilityIdentifier("getAffirmationButton")
+                                }
+
 
                                                                 // Display Fetched Affirmation
                                                                 if let affirmation = affirmationService.affirmation {
