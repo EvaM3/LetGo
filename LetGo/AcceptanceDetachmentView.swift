@@ -44,6 +44,7 @@ struct AcceptanceDetachmentView: View {
                                     .foregroundColor(.white)
                                     .multilineTextAlignment(.center)
                                     .padding()
+                                    .accessibilityIdentifier("acceptanceTitle")
 
                                 Text("Acceptance brings peace. Detachment frees you from emotional overwhelm. Reflect, tap, and visualize your way to emotional freedom.")
                                     .font(.headline)
@@ -70,6 +71,7 @@ struct AcceptanceDetachmentView: View {
                                             .foregroundColor(.white)
                                             .background(Color.clear)
                                             .padding(8)
+                                            .accessibilityIdentifier("reflectionEditor")
                                     }
                                 }
 
@@ -84,6 +86,7 @@ struct AcceptanceDetachmentView: View {
                                         .background(Color.white.opacity(0.2))
                                         .cornerRadius(10)
                                         .padding(.horizontal)
+                                        .accessibilityIdentifier("emotionTextField")
                                     Button(action: {
                                                                         affirmationService.fetchAffirmation(for: emotionLabel)
                                                                     }) {
@@ -96,6 +99,8 @@ struct AcceptanceDetachmentView: View {
                                                                             .cornerRadius(10)
                                                                             .padding(.horizontal)
                                                                     }
+                                                                    .accessibilityIdentifier("getAffirmationButton")
+
                                                                 }
 
                                                                 // Display Fetched Affirmation
@@ -112,6 +117,7 @@ struct AcceptanceDetachmentView: View {
                                                                             .padding()
                                                                             .background(Color.white.opacity(0.15))
                                                                             .cornerRadius(10)
+                                                                            .accessibilityIdentifier("fetchedAffirmation")
                                                                     }
                                                                     .padding(.horizontal)
                                                                 }
@@ -130,6 +136,7 @@ struct AcceptanceDetachmentView: View {
                                                                             .frame(height: 80)
                                                                             .foregroundColor(.white)
                                                                             .background(Color.clear)
+                                                                            .accessibilityIdentifier("visualizationEditor")
                                                                     }
                                                                 }
                                                             }
@@ -150,6 +157,8 @@ struct AcceptanceDetachmentView: View {
                             .font(.headline)
                             .padding()
                             .frame(maxWidth: .infinity)
+                            .accessibilityIdentifier("startTappingAcceptanceButton")
+
                             .background(
                                 LinearGradient(gradient: Gradient(colors: gradientColors.shuffled()), startPoint: .leading, endPoint: .trailing)
                             )

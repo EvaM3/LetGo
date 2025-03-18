@@ -55,6 +55,8 @@ struct LetThemView: View {
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 10)
+                        .accessibilityIdentifier("letThemTitle")
+                       
                         
 
                     Text("Release the need to control others and embrace peace through acceptance.")
@@ -62,6 +64,7 @@ struct LetThemView: View {
                         .multilineTextAlignment(.center)
                         .foregroundColor(.white.opacity(0.8))
                         .padding(.horizontal)
+                       
                 }
                 .padding(.top, 40)
 
@@ -79,6 +82,7 @@ struct LetThemView: View {
                             }) {
                                 Text(scenario)
                             }
+                            .accessibilityIdentifier("scenario-\(scenario)")
                         }
                     } label: {
                         HStack {
@@ -86,6 +90,7 @@ struct LetThemView: View {
                                 .foregroundColor(.white)
                                 .font(.headline)
                                 .padding()
+                               
                             
                             Spacer()
                             
@@ -100,6 +105,7 @@ struct LetThemView: View {
                     }
                     .padding(.horizontal)
                 }
+                .accessibilityIdentifier("scenarioMenu")
 
                 VStack(alignment: .leading) {
                     Text("Reflect on this:")
@@ -116,6 +122,7 @@ struct LetThemView: View {
                             .frame(height: 150)
                             .foregroundColor(.white)
                             .padding(8)
+                            .accessibilityIdentifier("reflectionEditor")
                     }
                     .padding(.horizontal)
                 }
@@ -134,6 +141,7 @@ struct LetThemView: View {
                     .foregroundColor(.black)
                     .cornerRadius(10)
                     .shadow(radius: 3)
+                    .accessibilityIdentifier("startTappingButton")
                 }
                 .padding(.horizontal)
 

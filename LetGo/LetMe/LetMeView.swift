@@ -40,6 +40,7 @@ struct LetMeView: View {
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
                         .padding()
+                        .accessibilityIdentifier("letMeTitle")
 
                     Text("Focus on your actions and mindset to reclaim your personal power.")
                         .font(.headline)
@@ -64,6 +65,7 @@ struct LetMeView: View {
                             .frame(height: 150)
                             .foregroundColor(.white)
                             .padding(8)
+                            .accessibilityIdentifier("empowermentEditor")
                     }
                     .padding(.horizontal)
                 }
@@ -82,6 +84,7 @@ struct LetMeView: View {
                     .foregroundColor(.black)
                     .cornerRadius(10)
                     .shadow(radius: 3)
+                    .accessibilityIdentifier("startEmpowermentTappingButton")
                 }
                 .padding(.horizontal)
 

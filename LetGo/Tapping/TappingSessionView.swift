@@ -57,6 +57,7 @@ struct TappingSessionView: View {
                         .bold()
                         .foregroundColor(.white)
                         .padding()
+                        .accessibilityIdentifier("tappingSessionTitle")
 
                     // Tapping Point Animation
                     ZStack {

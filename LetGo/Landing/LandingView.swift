@@ -45,6 +45,7 @@ struct LandingView: View {
                         .opacity(fadeIn ? 1 : 0)
                         .scaleEffect(glowingText ? 1.05 : 1)
                         .shadow(color: Color.green.opacity(0.8), radius: glowingText ? 12 : 0)
+                        .accessibilityIdentifier("welcomeText")
 
                     Text("Explore different paths to emotional freedom: release control, embrace empowerment, and heal from within.")
                         .font(.body)
@@ -73,6 +74,7 @@ struct LandingView: View {
                             .shadow(radius: 3)
                             .padding(.horizontal, 40)
                     }
+                    .accessibilityIdentifier("enterButton")
                     .opacity(fadeIn ? 1 : 0)
                     // Information Button
                                       Button(action: {
@@ -95,6 +97,7 @@ struct LandingView: View {
                                           .cornerRadius(10)
                                           .padding(.horizontal, 40)
                                       }
+                                      .accessibilityIdentifier("learnMoreButton")
                                       .opacity(fadeIn ? 1 : 0)
                                   }
                 

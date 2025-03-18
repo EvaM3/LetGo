@@ -31,6 +31,7 @@ struct InformationView: View {
                             .fontWeight(.bold)
                             .foregroundColor(.white)
                             .padding(.bottom, 10)
+                            .accessibilityIdentifier("InformationViewRoot")
 
                         Text("Radical Acceptance is about embracing reality as it is, without judgment or resistance. Emotional Detachment allows us to step back from overwhelming emotions, gaining clarity and peace.")
                             .font(.body)
@@ -150,6 +151,7 @@ struct InformationView: View {
                             .font(.title2)
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
+                            .accessibilityIdentifier("booksSection")
 
                         VStack(alignment: .leading, spacing: 15) {
                             Text("1. *The Tapping Solution* by Nick Ortner")
