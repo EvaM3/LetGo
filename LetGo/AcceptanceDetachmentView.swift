@@ -9,6 +9,8 @@ import SwiftUI
 struct AcceptanceDetachmentView: View {
     @State private var userReflection = ""
     @State private var emotionLabel = ""
+    @State private var reflectionLabel = ""
+    @State private var visualizationLabel = ""
     @State private var detachmentVisualization = ""
     @StateObject private var affirmationService = AffirmationAPIMockService()
 
@@ -40,6 +42,7 @@ struct AcceptanceDetachmentView: View {
                             VStack {
                                 Text("Radical Acceptance & Emotional Detachment")
                                     .font(.largeTitle)
+                                    .fontDesign(.serif)
                                     .fontWeight(.bold)
                                     .foregroundColor(.white)
                                     .multilineTextAlignment(.center)
@@ -54,25 +57,33 @@ struct AcceptanceDetachmentView: View {
                             }
                             .padding(.top, 40)
 
-                            // Reflection Part 
+                            // Reflection Part
                             VStack(alignment: .leading, spacing: 20) {
                                 VStack(alignment: .leading) {
                                     Text("Reflect on What You’re Resisting:")
                                         .font(.headline)
                                         .foregroundColor(.white)
+                                    
+                                    TextField("I'm resisting...", text: $reflectionLabel)
+                                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                                        .background(Color.white.opacity(0.2))
+                                        .cornerRadius(10)
+                                        .accessibilityIdentifier("emotionTextField")
 
-                                    ZStack(alignment: .topLeading) {
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .fill(Color.white.opacity(0.15))
-                                            .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
-
-                                        TextEditor(text: $userReflection)
-                                            .frame(height: 100)
-                                            .foregroundColor(.white)
-                                            .background(Color.clear)
-                                            .padding(8)
-                                            .accessibilityIdentifier("reflectionEditor")
-                                    }
+//                                    ZStack(alignment: .topLeading) {
+//                                        RoundedRectangle(cornerRadius: 10)
+//                                            .fill(Color.white.opacity(0.15))
+//                                            .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
+//
+//
+//
+//                                        TextEditor(text: $userReflection)
+//                                            .frame(height: 100)
+//                                            .foregroundColor(.white)
+//                                            .background(Color.clear)
+//                                            .padding(8)
+//                                            .accessibilityIdentifier("reflectionEditor")
+//                                    }
                                 }
 
                                 VStack(alignment: .leading, spacing: 10) {
@@ -85,7 +96,8 @@ struct AcceptanceDetachmentView: View {
                                         .background(Color.white.opacity(0.2))
                                         .cornerRadius(10)
                                         .accessibilityIdentifier("emotionTextField")
-
+                                        
+                                        Spacer()
                                     Button(action: {
                                         affirmationService.fetchAffirmation(for: emotionLabel)
                                     }) {
@@ -120,23 +132,27 @@ struct AcceptanceDetachmentView: View {
                                                                     .padding(.horizontal)
                                                                 }
 
-                                                                VStack(alignment: .leading) {
-                                                                    Text("Visualize Letting Go:")
-                                                                        .font(.headline)
-                                                                        .foregroundColor(.white)
+                                VStack(alignment: .leading, spacing: 10) {
+                                    Text("Visualize Letting Go:")
+                                        .font(.headline)
+                                        .foregroundColor(.white)
 
-                                                                    ZStack(alignment: .topLeading) {
-                                                                        RoundedRectangle(cornerRadius: 10)
-                                                                            .fill(Color.white.opacity(0.15))
-                                                                            .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
+                                    TextField("Letting go of...", text: $visualizationLabel)
+                                        .padding()
+                                        .foregroundColor(.black)
+                                        .background(Color.white)
+                                        .cornerRadius(10)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .stroke(Color.white.opacity(0.2), lineWidth: 0.5)
+                                        )
+                                        .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
+                                        .frame(height: 50)
+                                        .accessibilityIdentifier("visualizationTextField")
+                                }
 
-                                                                        TextEditor(text: $detachmentVisualization)
-                                                                            .frame(height: 80)
-                                                                            .foregroundColor(.white)
-                                                                            .background(Color.clear)
-                                                                            .accessibilityIdentifier("visualizationEditor")
-                                                                    }
-                                                                }
+
+
                                                             }
                                                             .padding(.horizontal)
 

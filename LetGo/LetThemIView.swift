@@ -51,6 +51,7 @@ struct LetThemView: View {
                 VStack {
                     Text("The 'Let Them' Philosophy")
                         .font(.largeTitle)
+                        .fontDesign(.serif)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)

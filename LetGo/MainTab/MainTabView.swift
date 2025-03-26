@@ -2,12 +2,10 @@
 //  MainTabView.swift
 //  LetGo
 //
-//  Created by Eva Sira Madarasz on 30/01/2025.
+//  Created by Eva  Madarasz 
 //
 
-
 import SwiftUI
-
 
 struct MainTabView: View {
     @State private var selectedTab: Int = 0
